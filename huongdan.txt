@@ -1,0 +1,22 @@
+cài git và git bash 
+linux: sudo apt-get install git
+win: https://git-scm.com/
+
+-Thi?t l?p ch?ng th?c cá nhân
+	git config --global user.name "DoAnCS217"
+	git config --global user.email "doancs217@gmail.com"
+- To disable TLS/SSL verification for a single git command
+	git -c http.sslVerify=false clone https://github.com/doancs217/ChuanDoanBenh.git
+- Chuy?n qua folder ChuanDoanBenh
+	cd ChuanDoanBenh
+- To disable SSL verification for a specific repository
+	git config http.sslVerify false
+Example:
+	echo "# Huong dan Git co ban" > test.text
+	git add test.text
+	git commit -m "test"
+	git push origin master
+	- Nh?p tài kho?n github: doancs217@gmail.com
+	- Mk: CS217i21
+- ?n dòng v? v?n: 
+	git config --global push.default simple
