@@ -1,39 +1,8 @@
-<div class="modal">
-  <div class="modal-dialog" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button aria-label="Close" class="close" type="button">
-                    <clr-icon aria-hidden="true" shape="close"></clr-icon>
-                </button>
-        <h3 class="modal-title">You need login to access to Management Page</h3>
-      </div>
-      <div class="modal-body">
-     
-          <form class="login">
-            
-            <div class="login-group">
-              
-              <input class="username" type="text" id="login_username" placeholder="Username">
-              <input class="password" type="password" id="login_password" placeholder="Password">
-              <div class="checkbox">
-                <input type="checkbox" id="rememberme">
-                <label for="rememberme">
-                    Remember me
-                </label>
-              </div>
-              <div class="error active">
-                Invalid user name or password
-              </div>
-              <button type="submit" class="btn btn-primary">Login</button>
-            </div>
-          </form>
-        
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline" type="button" [routerLink]="['/home']" routerLinkActive="active">Cancel</button>
-        <button class="btn btn-primary" type="button">Ok</button>
-      </div>
-    </div>
-  </div>
+<div class="logout">
+  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+  <button class="btn btn-danger">Discard</button>
+  <button class="btn btn-success">Save</button>
 </div>
-<div class="modal-backdrop" aria-hidden="true"></div>
+<div *ngIf="!isLogined">
+  <app-login-form [isLogined]="isLogined" (returnSuccessLogin)="returnSuccessLogin($event)">></app-login-form>
+</div>

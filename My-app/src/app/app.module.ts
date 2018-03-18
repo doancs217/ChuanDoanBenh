@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ManagementComponent } from './management/management.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ManagementComponent } from './management/management.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ManagementComponent
+    ManagementComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
